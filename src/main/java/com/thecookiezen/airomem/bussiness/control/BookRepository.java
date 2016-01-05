@@ -11,8 +11,8 @@ import javax.ejb.Singleton;
 import javax.ejb.Startup;
 import java.util.Collection;
 
-@Singleton
 @Startup
+@Singleton
 public class BookRepository {
 
     private PersistenceController<DataRoot<LibraryView, Library>, LibraryView> controller;
@@ -29,5 +29,9 @@ public class BookRepository {
 
     public Collection<Book> getByAuthor(String author) {
         return controller.query(view -> view.getByAuthor(author));
+    }
+
+    public void create(String title, String author) {
+        controller.execute(view -> view.getDataObject().addNewBook(title, author));
     }
 }

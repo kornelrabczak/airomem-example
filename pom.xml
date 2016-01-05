@@ -76,6 +76,20 @@
             <version>${wildfly.swarm.version}</version>
         </dependency>
         <dependency>
+            <groupId>org.wildfly.swarm</groupId>
+            <artifactId>wildfly-swarm-jaxrs-weld</artifactId>
+            <version>${wildfly.swarm.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.wildfly.swarm</groupId>
+            <artifactId>wildfly-swarm-weld</artifactId>
+            <version>${wildfly.swarm.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-jackson2-provider</artifactId>
+        </dependency>
+        <dependency>
             <groupId>pl.setblack</groupId>
             <artifactId>airomem-core</artifactId>
             <version>1.0.2</version>

@@ -19,7 +19,7 @@ public class Library implements LibraryView, Serializable {
     @Override
     public void addNewBook(String title, String author) {
         assert WriteChecker.hasPrevalanceContext();
-        final Book book = new Book(UUID.randomUUID().toString(), title, author);
+        final Book book = new Book(UUID.randomUUID().toString(), author, title);
         this.books.add(book);
     }
 
